@@ -596,7 +596,7 @@ class BaseGroupBy(PandasObject, SelectionMixin[NDFrameT], GroupByIndexingMixin):
 
     @final
     def __len__(self) -> int:
-        return len(self.groups)
+        return self._grouper.ngroups
 
     @final
     def __repr__(self) -> str:
@@ -3643,8 +3643,8 @@ class GroupBy(BaseGroupBy[NDFrameT]):
             If a timedelta, str, or offset, the time period of each window. Each
             window will be a variable sized based on the observations included in
             the time-period. This is only valid for datetimelike indexes.
-            To learn more about the offsets & frequency strings, please see `this link
-            <https://pandas.pydata.org/pandas-docs/stable/user_guide/timeseries.html#offset-aliases>`__.
+            To learn more about the offsets & frequency strings, please see
+            :ref:`this link<timeseries.offset_aliases>`.
 
             If a BaseIndexer subclass, the window boundaries
             based on the defined ``get_window_bounds`` method. Additional rolling

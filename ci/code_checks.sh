@@ -134,7 +134,6 @@ if [[ -z "$CHECK" || "$CHECK" == "docstrings" ]]; then
         -i "pandas.core.resample.Resampler.var SA01" \
         -i "pandas.errors.AttributeConflictWarning SA01" \
         -i "pandas.errors.CSSWarning SA01" \
-        -i "pandas.errors.CategoricalConversionWarning SA01" \
         -i "pandas.errors.ChainedAssignmentError SA01" \
         -i "pandas.errors.DataError SA01" \
         -i "pandas.errors.DuplicateLabelError SA01" \
@@ -154,7 +153,6 @@ if [[ -z "$CHECK" || "$CHECK" == "docstrings" ]]; then
         -i "pandas.errors.ValueLabelTypeMismatch SA01" \
         -i "pandas.infer_freq SA01" \
         -i "pandas.io.json.build_table_schema PR07,RT03,SA01" \
-        -i "pandas.io.stata.StataReader.variable_labels RT03,SA01" \
         -i "pandas.io.stata.StataWriter.write_file SA01" \
         -i "pandas.json_normalize RT03,SA01" \
         -i "pandas.plotting.andrews_curves RT03,SA01" \
